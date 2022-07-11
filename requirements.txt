@@ -1,0 +1,10 @@
+moviepy
+gtts
+praw
+psaw
+pyttsx3==2.71
+librosa
+pillow 
+selenium
+azure-cognitiveservices-speech
+sox
