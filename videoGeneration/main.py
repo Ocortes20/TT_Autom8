@@ -1,6 +1,7 @@
 from renderReddit import * 
 from redditParser import Scraper
 
+
 with open("newLinks.txt", "r") as f:
 	for line in f.readlines():
 		# lines have link, number of comments

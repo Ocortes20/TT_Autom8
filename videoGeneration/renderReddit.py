@@ -10,7 +10,7 @@ from renderImages import ImageRenderer
 from util import createFolders
 
 from datetime import datetime
-from dotenv import load_dotenv
+from dotenv import dotenv_values
 import os
 import shutil
 import traceback
@@ -27,7 +27,7 @@ def storytimeByQuery(subreddit, query, limit, baseVideo, baseAudio=None):
 	os.mkdir(f"./tmp/{time}")
 
 
-	config = load_dotenv(".env")
+	config = dotenv_values(".env")
 	s = Scraper(
 		config["USERNAME"],
 		config["PWD"],
@@ -82,7 +82,7 @@ def storytime(url, limit, baseVideo, videoName, baseAudio=None):
 	os.mkdir(f"./tmp/{time}")
 
 	# VVV change the Scraper for your own client
-	config = load_dotenv(".env")
+	config = dotenv_values(".env")
 	s = Scraper(
 		config["USERNAME"],
 		config["PWD"],
@@ -139,7 +139,7 @@ def askReddit(url,limit, baseVideo, videoName, baseAudio=None):
 
 	os.mkdir(f"./tmp/{time}")
 	# VVV change the Scraper for your own client
-	config = load_dotenv(".env")
+	config = dotenv_values(".env")
 	s = Scraper(
 		config["USERNAME"],
 		config["PWD"],
@@ -195,7 +195,7 @@ def multipleAskReddit( query, limit, baseVideo, baseAudio=None):
 
 	Still in development
 	'''
-	config = load_dotenv(".env")
+	config = dotenv_values(".env")
 	s = Scraper(
 		config["USERNAME"],
 		config["PWD"],
@@ -223,7 +223,7 @@ def askRedditComment(url, baseVideo, videoName, baseAudio=None):
 
 	os.mkdir(f"./tmp/{time}")
 	# VVV change the Scraper for your own client
-	config = load_dotenv(".env")
+	config = dotenv_values(".env")
 	s = Scraper(
 		config["USERNAME"],
 		config["PWD"],
