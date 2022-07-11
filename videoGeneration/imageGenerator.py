@@ -12,27 +12,3 @@ def createAssets(paragraphs, dirr):
         os.system(command)          
 
 
-
-
-'''
-
-s = Scraper(
-	"TiktokAdBot19",
-	"blueblanket",
-	"SMBZQHgBa7urm4vjwvJXCA",
-	"nD1mufVJdBtLR4KGHVhs8xe9HMx4Lg",
-	"Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0")
-'''
-'''
-for index, item in enumerate(
-    s.listParagraphs(
-        s.scrapeTexts("tifu", "wife", 2)[0]
-    )):
-
-        createAssets(item, os.path.join(os.getcwd(), "test", f"image{index}.png" ))
-'''
-#createAssets(s.listParagraphs(s.scrapeTexts("shsat", "patch", 10)[0]), os.path.join("./test", "img.png"))
-'''
-
-p = "Yesterday I was getting ready for work and put on some brand new undies out of the package. I've always usually washed them first for fear that some weird detergent or something could harm my dong or make my butt itchy, but I was in a hurry and grabbed some and threw them on and headed to work."
-createAssets([p],os.path.join("./test", "img.png"))'''
