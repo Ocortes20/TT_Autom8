@@ -1,9 +1,18 @@
 Tiktok Ad Automater
 
-Automates story time style tiktok with tts for tiktok using moviepy, gtts, and other things.
+Automates story time style tiktok with tts for tiktok using moviepy, selenium, and other things.
 
 
 Instructions:
 
 Step 1: $pip3 install -r requirements.txt
-Step 2: python3 main.py and follow instructions
+Step 2: Load up your assets folder with some background video and audio
+Step 3: Change your main.py file to load the video you want to use (maybe I'll stick it into .env rn but idk)
+Step 4: If you want to try out storytime videos or something diff, check out renderReddit.py for more video types. I see the main.py file as more of a sandbox for you to use the functions written.
+
+
+Other comments:
+
+- Sometimes the comment / audio in a video will not align. This is usually because the comment was deleted, and PSAW will not pick it up. I don't have a fix for it right now, perhaps someone can propose a change
+- Sometimes there will be an error about decodeErrors, that can be either a blank entry, or something else
+- The video might not be able to render every deleted post. I don't have a fix if PSAW can't pick it up. 
