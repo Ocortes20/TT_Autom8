@@ -1,4 +1,4 @@
-Tiktok Ad Automater
+Tiktok Reddit Automater
 
 Automates story time style tiktok with tts for tiktok using moviepy, selenium, and other things.
 
