@@ -1,9 +1,9 @@
 
 
 #all video files and tmp assets
-videoGeneration/tmp/
-videoGeneration/assets/
-videoGeneration/videos/
+videoGeneration/tmp/**
+videoGeneration/assets/**
+videoGeneration/videos/**
 
 
 #file extensions
