@@ -127,20 +127,3 @@ class Scraper:
 			count += 1
 		
 		return comments
-
-'''
-s = Scraper(
-	"TiktokAdBot19",
-	"blueblanket",
-	"SMBZQHgBa7urm4vjwvJXCA",
-	"nD1mufVJdBtLR4KGHVhs8xe9HMx4Lg",
-	"Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0")
-
-
-print(
-	s.scrapeTopComments(
-		s.getSubmissionByUrl("https://www.reddit.com/r/AskReddit/comments/hap54j/sex_workers_of_reddit_have_any_of_you_ever_have_a/"),
-		5
-		)
-	)
-'''

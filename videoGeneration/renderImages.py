@@ -3,9 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 #from selenium.webdriver.support import expected_conditions as ec
 #from selenium.webdriver.support.ui import WebDriverWait
-
-from PIL import Image
-
 import time
 import os 
 
@@ -268,9 +265,3 @@ class ImageRenderer:
 				f.write(p.screenshot_as_png)
 				count += 1
 				time.sleep(.01)
-
-				
-'''
-ImageRenderer().getTopComments(
-	"https://www.reddit.com/r/AskReddit/comments/hap54j/sex_workers_of_reddit_have_any_of_you_ever_have_a/",
-	"./videos", 3	)'''

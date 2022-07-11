@@ -2,6 +2,7 @@
 	A module filled with render functions for all sorts of tiktok / shorts needs!
 
 '''
+from json import load
 from speechToText import makeAudio
 from redditParser import Scraper
 from videoGenerator import generateVideo
@@ -9,6 +10,7 @@ from renderImages import ImageRenderer
 from util import createFolders
 
 from datetime import datetime
+from dotenv import load_dotenv
 import os
 import shutil
 import traceback
@@ -19,17 +21,19 @@ import traceback
 
 def storytimeByQuery(subreddit, query, limit, baseVideo, baseAudio=None):
 
+
 	time = datetime.now().strftime("%Y%m%d-%H%M%S")
 
 	os.mkdir(f"./tmp/{time}")
 
-	# VVV change the Scraper for your own client
+
+	config = load_dotenv(".env")
 	s = Scraper(
-		"TiktokAdBot19",
-		"blueblanket",
-		"SMBZQHgBa7urm4vjwvJXCA",
-		"nD1mufVJdBtLR4KGHVhs8xe9HMx4Lg",
-		"Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0")
+		config["USERNAME"],
+		config["PWD"],
+		config["CLIENT_ID"],
+		config["CLIENT_SECRET"],
+		config["USER_AGENT"])
 
 	submissions = s.scrapeTexts(subreddit, query, limit)
 	videosMade = 0
@@ -78,12 +82,14 @@ def storytime(url, limit, baseVideo, videoName, baseAudio=None):
 	os.mkdir(f"./tmp/{time}")
 
 	# VVV change the Scraper for your own client
+	config = load_dotenv(".env")
 	s = Scraper(
-		"TiktokAdBot19",
-		"blueblanket",
-		"SMBZQHgBa7urm4vjwvJXCA",
-		"nD1mufVJdBtLR4KGHVhs8xe9HMx4Lg",
-		"Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0")
+		config["USERNAME"],
+		config["PWD"],
+		config["CLIENT_ID"],
+		config["CLIENT_SECRET"],
+		config["USER_AGENT"])
+
 
 
 	try: 
@@ -133,12 +139,14 @@ def askReddit(url,limit, baseVideo, videoName, baseAudio=None):
 
 	os.mkdir(f"./tmp/{time}")
 	# VVV change the Scraper for your own client
+	config = load_dotenv(".env")
 	s = Scraper(
-		"TiktokAdBot19",
-		"blueblanket",
-		"SMBZQHgBa7urm4vjwvJXCA",
-		"nD1mufVJdBtLR4KGHVhs8xe9HMx4Lg",
-		"Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0")
+		config["USERNAME"],
+		config["PWD"],
+		config["CLIENT_ID"],
+		config["CLIENT_SECRET"],
+		config["USER_AGENT"])
+
 
 
 	try: 
@@ -187,12 +195,14 @@ def multipleAskReddit( query, limit, baseVideo, baseAudio=None):
 
 	Still in development
 	'''
+	config = load_dotenv(".env")
 	s = Scraper(
-		"TiktokAdBot19",
-		"blueblanket",
-		"SMBZQHgBa7urm4vjwvJXCA",
-		"nD1mufVJdBtLR4KGHVhs8xe9HMx4Lg",
-		"Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0")
+		config["USERNAME"],
+		config["PWD"],
+		config["CLIENT_ID"],
+		config["CLIENT_SECRET"],
+		config["USER_AGENT"])
+
 
 	submissions = s.scrapeTexts("askreddit", query, limit)
 	videosMade = 0
@@ -213,12 +223,14 @@ def askRedditComment(url, baseVideo, videoName, baseAudio=None):
 
 	os.mkdir(f"./tmp/{time}")
 	# VVV change the Scraper for your own client
+	config = load_dotenv(".env")
 	s = Scraper(
-		"TiktokAdBot19",
-		"blueblanket",
-		"SMBZQHgBa7urm4vjwvJXCA",
-		"nD1mufVJdBtLR4KGHVhs8xe9HMx4Lg",
-		"Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0")
+		config["USERNAME"],
+		config["PWD"],
+		config["CLIENT_ID"],
+		config["CLIENT_SECRET"],
+		config["USER_AGENT"])
+
 
 
 	try: 
@@ -252,10 +264,3 @@ def askRedditComment(url, baseVideo, videoName, baseAudio=None):
 
 	except Exception as e:
 				print(f"Error at {videoName} : {traceback.format_exc()}")
-'''
-askReddit(
-	"https://www.reddit.com/r/AskReddit/comments/veb7ap/whats_the_worst_thing_about_being_a_man/",
-	5,
-	"C:\\Users\\pging\\Desktop\\Ad Automator\\videoGeneration\\assets\\videos\\minecraft_parkour_2.mp4",
-	"video0"
-	)'''

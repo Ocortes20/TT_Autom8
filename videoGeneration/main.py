@@ -1,14 +1,6 @@
 from renderReddit import * 
 from redditParser import Scraper
 
-s = Scraper(
-		"TiktokAdBot19",
-		"blueblanket",
-		"SMBZQHgBa7urm4vjwvJXCA",
-		"nD1mufVJdBtLR4KGHVhs8xe9HMx4Lg",
-		"Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0")
-
-
 with open("newLinks.txt", "r") as f:
 	for line in f.readlines():
 		# lines have link, number of comments

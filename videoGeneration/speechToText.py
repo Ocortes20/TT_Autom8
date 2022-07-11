@@ -67,7 +67,8 @@ def makeAudio(paragraphs, dirr):
                                 else:
                                         os.rename(clips[0], os.path.join(dirr,filename))                
 
-        #shutil.rmtree(os.path.join(dirr, "tmp"))
+        #
+        # shutil.rmtree(os.path.join(dirr, "tmp"))
 
 
 
@@ -76,7 +77,7 @@ def makeAudio(paragraphs, dirr):
 import azure.cognitiveservices.speech as speechsdk
 
 def makeAudio(paragraphs, dirr):
-    speech_config = speechsdk.SpeechConfig(subscription="4874f4a85555415b898333443f89bd1d", region="eastus")
+    speech_config = speechsdk.SpeechConfig(subscription="", region="eastus")
     #language
     speech_config.speech_synthesis_voice_name='en-US-JacobNeural'
 
