@@ -16,3 +16,4 @@ Other comments:
 - Sometimes the comment / audio in a video will not align. This is usually because the comment was deleted, and PSAW will not pick it up. I don't have a fix for it right now, perhaps someone can propose a change
 - Sometimes there will be an error about decodeErrors, that can be either a blank entry, or something else
 - The video might not be able to render every deleted post. I don't have a fix if PSAW can't pick it up. 
+- There are some functions in textToSpeech.py and other places that are commented out using other technologies like azure, gtts, etc. I don't advise you use them, but if you want to try, the imports are there just pip install the appropriate dependencies.
