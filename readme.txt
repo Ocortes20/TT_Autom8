@@ -17,3 +17,6 @@ Other comments:
 - Sometimes there will be an error about decodeErrors, that can be either a blank entry, or something else
 - The video might not be able to render every deleted post. I don't have a fix if PSAW can't pick it up. 
 - There are some functions in textToSpeech.py and other places that are commented out using other technologies like azure, gtts, etc. I don't advise you use them, but if you want to try, the imports are there just pip install the appropriate dependencies.
+- Videos end up in /videoGenerations/videos , you'll also find in tmp some assets for the video. You can clear out the tmp folder when the video is done rendering. Just don't delete the tmp folder (it's used in the rendering of the actual video).
+
+Have fun with it. Enjoy, god bless, and stay safe!
