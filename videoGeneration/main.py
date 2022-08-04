@@ -28,3 +28,4 @@ with open("newLinks.txt", "r") as f:
 		with open("listoflinks.txt", "a") as f:
 			f.write(link)
 			
+/////
